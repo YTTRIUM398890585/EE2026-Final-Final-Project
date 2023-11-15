@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="canvasgrid_ram_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1699972943">
+  <File Type="PA-TCL" Name="canvasgrid_ram.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="canvasgrid_ram_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="canvasgrid_ram_reports.tcl"/>
+  <File Type="RDS-RDS" Name="canvasgrid_ram.vds"/>
+  <File Type="RDS-UTIL" Name="canvasgrid_ram_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="canvasgrid_ram_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="canvasgrid_ram.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="canvasgrid_ram_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="canvasgrid_ram_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/canvasgrid_ram">
+    <File Path="$PSRCDIR/sources_1/ip/canvasgrid_ram/canvasgrid_ram.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="canvasgrid_ram"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/canvasgrid_ram">
+    <File Path="$PSRCDIR/sources_1/ip/canvasgrid_ram/canvasgrid_ram.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="canvasgrid_ram"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1699972956">
+  <File Type="BITSTR-BMM" Name="Top_Student_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Top_Student_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Top_Student_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="Top_Student_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Top_Student.tcl"/>
+  <File Type="OPT-TIMING" Name="Top_Student_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Top_Student_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="Top_Student_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Top_Student_reports.tcl"/>
+  <File Type="OPT-DRC" Name="Top_Student_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Top_Student.hwdef"/>
+  <File Type="PWROPT-DCP" Name="Top_Student_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="Top_Student_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Top_Student_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Top_Student_placed.dcp"/>
+  <File Type="PLACE-IO" Name="Top_Student_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Top_Student_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Top_Student_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Top_Student_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Top_Student_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Top_Student_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Top_Student_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="Top_Student.bgn"/>
+  <File Type="PLACE-TIMING" Name="Top_Student_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Top_Student_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="Top_Student.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Top_Student_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Top_Student_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Top_Student_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="Top_Student.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="Top_Student_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Top_Student_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Top_Student_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Top_Student_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Top_Student_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Top_Student_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Top_Student.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="Top_Student_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="Top_Student.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Top_Student_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Top_Student_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="Top_Student.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Top_Student_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="Top_Student_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Top_Student_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Top_Student_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Top_Student_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Top_Student_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Top_Student_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Top_Student_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Top_Student_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Top_Student_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Top_Student_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Top_Student_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Top_Student_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Top_Student_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Top_Student_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Top_Student_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Top_Student_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Top_Student_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Top_Student_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="Top_Student.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Top_Student_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="Top_Student.rbt"/>
+  <File Type="BITSTR-NKY" Name="Top_Student.nky"/>
+  <File Type="BG-DRC" Name="Top_Student.drc"/>
+  <File Type="RDI-RDI" Name="Top_Student.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/new/Blinkingdisplay.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/Blinkingdisplay.v"/>
+        <Attr Name="ImportTime" Val="1699110754"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/K-map.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/K-map.v"/>
+        <Attr Name="ImportTime" Val="1699099344"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Menu.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/Menu.v"/>
+        <Attr Name="ImportTime" Val="1699110754"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Oled_Display.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/Oled_Display.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/all_gates.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/all_gates.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/button_debounce.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/button_debounce.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/canvas_grid.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/canvas_grid.v"/>
+        <Attr Name="ImportTime" Val="1699971832"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/cartesian_pixel.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/cartesian_pixel.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/circuit_logic.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/circuit_logic.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/circuit_preloader.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/circuit_preloader.v"/>
+        <Attr Name="ImportTime" Val="1699969985"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/clk_divider.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/clk_divider.v"/>
+        <Attr Name="ImportTime" Val="1699111240"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/clock_gen.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/clock_gen.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/display1.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/display1.v"/>
+        <Attr Name="ImportTime" Val="1699110104"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/display2.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/display2.v"/>
+        <Attr Name="ImportTime" Val="1699110104"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/display_button.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/display_button.v"/>
+        <Attr Name="ImportTime" Val="1699551522"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/displaybutton_control.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/displaybutton_control.v"/>
+        <Attr Name="ImportTime" Val="1699888086"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_border.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_border.v"/>
+        <Attr Name="ImportTime" Val="1699099344"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_four.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_four.v"/>
+        <Attr Name="ImportTime" Val="1699065631"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_gates.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_gates.v"/>
+        <Attr Name="ImportTime" Val="1699099344"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_in_wire.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_in_wire.v"/>
+        <Attr Name="ImportTime" Val="1699099344"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_one.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_one.v"/>
+        <Attr Name="ImportTime" Val="1699080776"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_quad.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_quad.v"/>
+        <Attr Name="ImportTime" Val="1699099344"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_squarecursor.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_squarecursor.v"/>
+        <Attr Name="ImportTime" Val="1699089452"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_three.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_three.v"/>
+        <Attr Name="ImportTime" Val="1699064534"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_two.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_two.v"/>
+        <Attr Name="ImportTime" Val="1699064968"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_zero.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_zero.v"/>
+        <Attr Name="ImportTime" Val="1699065517"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/gate.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/gate.v"/>
+        <Attr Name="ImportTime" Val="1699099344"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/gate_display.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/gate_display.v"/>
+        <Attr Name="ImportTime" Val="1699094554"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/gate_pos_type_segment.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/gate_pos_type_segment.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/gate_screen.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/gate_screen.v"/>
+        <Attr Name="ImportTime" Val="1699105501"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/gateconfig_menu.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/gateconfig_menu.v"/>
+        <Attr Name="ImportTime" Val="1699953715"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/gatedisplay_control.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/gatedisplay_control.v"/>
+        <Attr Name="ImportTime" Val="1699860368"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/improved_clock.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/improved_clock.v"/>
+        <Attr Name="ImportTime" Val="1697393959"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/invert_xy.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/invert_xy.v"/>
+        <Attr Name="ImportTime" Val="1698848770"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/is_a.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/is_a.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/is_b.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/is_b.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/is_c.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/is_c.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/is_d.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/is_d.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/is_one.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/is_one.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/is_one_big.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/is_one_big.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/is_str_out.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/is_str_out.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/is_three.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/is_three.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/is_two.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/is_two.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/is_zero.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/is_zero.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/is_zero_big.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/is_zero_big.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/kmap.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/kmap.v"/>
+        <Attr Name="ImportTime" Val="1699111546"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/kmap_gen.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/kmap_gen.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/led_driver.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/led_driver.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/mouse_tracker.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/mouse_tracker.v"/>
+        <Attr Name="ImportTime" Val="1699353195"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/mouseinput_interpreter.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/mouseinput_interpreter.v"/>
+        <Attr Name="ImportTime" Val="1699355187"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/numinputs_display.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/numinputs_display.v"/>
+        <Attr Name="ImportTime" Val="1699430090"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/oled_driver.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/oled_driver.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/pixel_index_to_xy.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/pixel_index_to_xy.v"/>
+        <Attr Name="ImportTime" Val="1699099344"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/pixel_index_to_xycoord.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/pixel_index_to_xycoord.v"/>
+        <Attr Name="ImportTime" Val="1699292835"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/rainbow.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/rainbow.v"/>
+        <Attr Name="ImportTime" Val="1699111879"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/seven_segment_driver.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/seven_segment_driver.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/sigignore_debounce.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/sigignore_debounce.v"/>
+        <Attr Name="ImportTime" Val="1699284901"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/stage_display.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/stage_display.v"/>
+        <Attr Name="ImportTime" Val="1699861663"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/stagedisplay_control.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/stagedisplay_control.v"/>
+        <Attr Name="ImportTime" Val="1699961649"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/student_a_top_file.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/student_a_top_file.v"/>
+        <Attr Name="ImportTime" Val="1699971832"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/student_bc_top_file.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/student_bc_top_file.v"/>
+        <Attr Name="ImportTime" Val="1699105514"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/student_d_top_file.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/student_d_top_file.v"/>
+        <Attr Name="ImportTime" Val="1699969985"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/truth_table_gen.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/truth_table_gen.v"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/wire.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/wire.v"/>
+        <Attr Name="ImportTime" Val="1699099344"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/xy_to_grid_index.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/xy_to_grid_index.v"/>
+        <Attr Name="ImportTime" Val="1699551439"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Mouse_Control.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/Mouse_Control.vhd"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Ps2Interface.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/Ps2Interface.vhd"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Top_Student.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/Top_Student.v"/>
+        <Attr Name="ImportTime" Val="1699969985"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_word.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_word.v"/>
+        <Attr Name="ImportTime" Val="1699099344"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/AlgebraInput.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/AlgebraInput.v"/>
+        <Attr Name="ImportTime" Val="1699099344"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/MIFreader.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/MIFreader.v"/>
+        <Attr Name="ImportTime" Val="1699099344"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_letterA.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterA.v"/>
+        <Attr Name="ImportTime" Val="1699955370"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_letterD.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterD.v"/>
+        <Attr Name="ImportTime" Val="1699736053"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_letterN.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterN.v"/>
+        <Attr Name="ImportTime" Val="1699736060"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_letterO.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterO.v"/>
+        <Attr Name="ImportTime" Val="1699736068"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_letterR.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterR.v"/>
+        <Attr Name="ImportTime" Val="1699736073"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_letterT.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterT.v"/>
+        <Attr Name="ImportTime" Val="1699736078"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/draw_letterX.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterX.v"/>
+        <Attr Name="ImportTime" Val="1699736084"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/gatename_display.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/gatename_display.v"/>
+        <Attr Name="ImportTime" Val="1699956223"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/sighold_debounce.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/sighold_debounce.v"/>
+        <Attr Name="ImportTime" Val="1699285884"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PIPUSERFILESDIR/mem_init_files/initial_circuit_personal.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PIPUSERFILESDIR/mem_init_files/logicgate_rom_personal.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Top_Student"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/new/constraint.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/constrs_1/new/constraint.xdc"/>
+        <Attr Name="ImportTime" Val="1699099305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="logicgate_rom"/>
+  <BlockFileSet Type="BlockSrcs" Name="canvasgrid_ram"/>
+</GenRun>
