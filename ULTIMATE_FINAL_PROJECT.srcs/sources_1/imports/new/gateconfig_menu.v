@@ -42,11 +42,21 @@ module gateconfig_menu(
     output [4:0] stageinput_is_one,
     output [4:0] stageinput_is_two,
     output [4:0] stageinput_is_three,
+    output [4:0] gateinput_is_zero,
     output [4:0] gateinput_is_one,
     output [4:0] gateinput_is_two,
     output [4:0] gateinput_is_three,
-    output [4:0] gateinput_is_four
+    output [4:0] gateinput_is_four,
+    output reg [2:0] numinputs = 0
     );
+
+    wire clk_10MHz;
+    improved_clock # (
+        .OUTPUT_FREQUENCY(10_000_000)
+    )(
+        .CLOCK(CLOCK),
+        .IMPROVED_CLOCK(clk_10MHz));
+
     /*Wiring and labelling canvas buttons*/
     wire [11:0] btn_gridcell;
     generate
@@ -122,7 +132,6 @@ module gateconfig_menu(
     parameter XNOR = 25;
     
     /*To decode gate type*/
-    reg [2:0] numinputs = 0;
     wire [4:0] loaded_gatetype;
     assign loaded_gatetype = selected_gatedata[4:0];
     
@@ -150,7 +159,7 @@ module gateconfig_menu(
             load_counten <= 1;
             load_init <= 0;
         end else begin
-            loaddata_rdy = (load_count == 2) ? 1 : loaddata_rdy;
+            loaddata_rdy <= (load_count == 2) ? 1 : loaddata_rdy;
             load_count <= (load_count < 2) && load_counten ? load_count + 1 : 0; 
             load_counten <= (load_count == 2) ? 0 : load_counten;
             load_init <= (load_count == 2) ? 1 : 0;
@@ -316,6 +325,7 @@ module gateconfig_menu(
     assign selectedstage_state = selected_gridcell[3:2] + 1;
     stagedisplay_control(
         .CLOCK(CLOCK),
+        .numinputs(numinputs),
         .menu_xcoord(menu_xcoord),
         .menu_ycoord(menu_ycoord),
         .stageinput4_state(stageinput4),
@@ -332,6 +342,7 @@ module gateconfig_menu(
     assign selectedgate_state = selected_gridcell[1:0];
     gatedisplay_control(
         .CLOCK(CLOCK),
+        .numinputs(numinputs),
         .menu_xcoord(menu_xcoord),
         .menu_ycoord(menu_ycoord),
         .gateinput4_state(gateinput4),
@@ -339,6 +350,7 @@ module gateconfig_menu(
         .gateinput2_state(gateinput2),
         .gateinput1_state(gateinput1),
         .selectedgate_state(selectedgate_state),
+        .gateinput_is_zero(gateinput_is_zero),
         .gateinput_is_one(gateinput_is_one),
         .gateinput_is_two(gateinput_is_two),
         .gateinput_is_three(gateinput_is_three),

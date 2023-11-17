@@ -30,6 +30,6 @@ module draw_letterR #(
     );
     assign is_R = (oleddisplay_xcoord == ORIGIN_X) && (oleddisplay_ycoord >= ORIGIN_Y) && (oleddisplay_ycoord <= ORIGIN_Y + 4)
     || (oleddisplay_xcoord == ORIGIN_X + 1) && ((oleddisplay_ycoord == ORIGIN_Y) || (oleddisplay_ycoord == ORIGIN_Y + 2))
-    || (oleddisplay_xcoord == ORIGIN_X + 2) && ((oleddisplay_ycoord == ORIGIN_Y) || (oleddisplay_ycoord == ORIGIN_Y + 2))
-    || (oleddisplay_xcoord == ORIGIN_X + 3) && (((oleddisplay_ycoord >= ORIGIN_Y) && (oleddisplay_ycoord <= ORIGIN_Y + 2)) || (oledisplay_ycoord == ORIGIN_Y + 4)) ? 1 : 0;
+    || (oleddisplay_xcoord == ORIGIN_X + 2) && ((oleddisplay_ycoord == ORIGIN_Y) || ((oleddisplay_ycoord >= ORIGIN_Y + 2) && (oleddisplay_ycoord <= ORIGIN_Y + 3)))
+    || (oleddisplay_xcoord == ORIGIN_X + 3) && (((oleddisplay_ycoord >= ORIGIN_Y) && (oleddisplay_ycoord <= ORIGIN_Y + 2)) || (oleddisplay_ycoord == ORIGIN_Y + 4)) ? 1 : 0;
 endmodule

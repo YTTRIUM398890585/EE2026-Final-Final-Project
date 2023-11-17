@@ -25,6 +25,7 @@ module displaybutton_control(
     input oled_id,
     input gateconfig_en,
     input canvasgrid_en,
+    input [2:0] numinputs,
     input [7:0] menu_xcoord,
     input [6:0] menu_ycoord,
     input [7:0] canvas_xcoord,
@@ -48,7 +49,7 @@ module displaybutton_control(
         .UPPERBOUND_Y(59)
     ) stageinput_1 (
         .CLOCK(CLOCK),
-        .drawborder_en(1),
+        .drawborder_en(1 & (numinputs >= 1)),
         .drawquad_en(0),
         .oledconfirm_id(0),
         .oled_id(oled_id),
@@ -57,7 +58,7 @@ module displaybutton_control(
         .oleddisplay_xcoord(menu_xcoord),
         .oleddisplay_ycoord(menu_ycoord),
         .mouse_input(mouse_leftpressed),
-        .btn_en(gateconfig_en),
+        .btn_en(gateconfig_en & (numinputs >= 1)),
         .is_border(is_border[0]),
         .is_quad(),
         .btn_pressed(menubtn_pressed[0]));
@@ -68,7 +69,7 @@ module displaybutton_control(
         .UPPERBOUND_Y(44)
     ) stageinput_2 (
         .CLOCK(CLOCK),
-        .drawborder_en(1),
+        .drawborder_en(1 & (numinputs >= 2)),
         .drawquad_en(0),
         .oledconfirm_id(0),
         .oled_id(oled_id),
@@ -77,7 +78,7 @@ module displaybutton_control(
         .oleddisplay_xcoord(menu_xcoord),
         .oleddisplay_ycoord(menu_ycoord),
         .mouse_input(mouse_leftpressed),
-        .btn_en(gateconfig_en),
+        .btn_en(gateconfig_en & (numinputs >= 2)),
         .is_border(is_border[1]),
         .is_quad(),
         .btn_pressed(menubtn_pressed[1]));
@@ -88,7 +89,7 @@ module displaybutton_control(
         .UPPERBOUND_Y(29)
     ) stageinput_3 (
         .CLOCK(CLOCK),
-        .drawborder_en(1),
+        .drawborder_en(1 & (numinputs >= 3)),
         .drawquad_en(0),
         .oledconfirm_id(0),
         .oled_id(oled_id),
@@ -97,7 +98,7 @@ module displaybutton_control(
         .oleddisplay_xcoord(menu_xcoord),
         .oleddisplay_ycoord(menu_ycoord),
         .mouse_input(mouse_leftpressed),
-        .btn_en(gateconfig_en),
+        .btn_en(gateconfig_en & (numinputs >= 3)),
         .is_border(is_border[2]),
         .is_quad(),
         .btn_pressed(menubtn_pressed[2]));
@@ -108,7 +109,7 @@ module displaybutton_control(
         .UPPERBOUND_Y(14)
     ) stageinput_4 (
         .CLOCK(CLOCK),
-        .drawborder_en(1),
+        .drawborder_en(1 & (numinputs >= 4)),
         .drawquad_en(0),
         .oledconfirm_id(0),
         .oled_id(oled_id),
@@ -117,7 +118,7 @@ module displaybutton_control(
         .oleddisplay_xcoord(menu_xcoord),
         .oleddisplay_ycoord(menu_ycoord),
         .mouse_input(mouse_leftpressed),
-        .btn_en(gateconfig_en),
+        .btn_en(gateconfig_en & (numinputs >= 4)),
         .is_border(is_border[3]),
         .is_quad(),
         .btn_pressed(menubtn_pressed[3]));
@@ -130,7 +131,7 @@ module displaybutton_control(
         .UPPERBOUND_Y(59)
     ) gateinput_1 (
         .CLOCK(CLOCK),
-        .drawborder_en(1),
+        .drawborder_en(1 & (numinputs >= 1)),
         .drawquad_en(0),
         .oledconfirm_id(0),
         .oled_id(oled_id),
@@ -139,7 +140,7 @@ module displaybutton_control(
         .oleddisplay_xcoord(menu_xcoord),
         .oleddisplay_ycoord(menu_ycoord),
         .mouse_input(mouse_leftpressed),
-        .btn_en(gateconfig_en),
+        .btn_en(gateconfig_en & (numinputs >= 1)),
         .is_border(is_border[4]),
         .is_quad(),
         .btn_pressed(menubtn_pressed[4]));
@@ -150,7 +151,7 @@ module displaybutton_control(
         .UPPERBOUND_Y(44)
     ) gateinput_2 (
         .CLOCK(CLOCK),
-        .drawborder_en(1),
+        .drawborder_en(1 & (numinputs >= 2)),
         .oledconfirm_id(0),
         .oled_id(oled_id),
         .mouse_x(mouse_x),
@@ -158,7 +159,7 @@ module displaybutton_control(
         .oleddisplay_xcoord(menu_xcoord),
         .oleddisplay_ycoord(menu_ycoord),
         .mouse_input(mouse_leftpressed),
-        .btn_en(gateconfig_en),
+        .btn_en(gateconfig_en & (numinputs >= 2)),
         .is_border(is_border[5]),
         .is_quad(),
         .btn_pressed(menubtn_pressed[5]));
@@ -169,7 +170,7 @@ module displaybutton_control(
         .UPPERBOUND_Y(29)
     ) gateinput_3 (
         .CLOCK(CLOCK),
-        .drawborder_en(1),
+        .drawborder_en(1 & (numinputs >= 3)),
         .drawquad_en(0),
         .oledconfirm_id(0),
         .oled_id(oled_id),
@@ -178,7 +179,7 @@ module displaybutton_control(
         .oleddisplay_xcoord(menu_xcoord),
         .oleddisplay_ycoord(menu_ycoord),
         .mouse_input(mouse_leftpressed),
-        .btn_en(gateconfig_en),
+        .btn_en(gateconfig_en & (numinputs >= 3)),
         .is_border(is_border[6]),
         .is_quad(),
         .btn_pressed(menubtn_pressed[6]));
@@ -189,7 +190,7 @@ module displaybutton_control(
         .UPPERBOUND_Y(14)
     ) gateinput_4 (
         .CLOCK(CLOCK),
-        .drawborder_en(1),
+        .drawborder_en(1 & (numinputs >= 4)),
         .drawquad_en(0),
         .oledconfirm_id(0),
         .oled_id(oled_id),
@@ -198,7 +199,7 @@ module displaybutton_control(
         .oleddisplay_xcoord(menu_xcoord),
         .oleddisplay_ycoord(menu_ycoord),
         .mouse_input(mouse_leftpressed),
-        .btn_en(gateconfig_en),
+        .btn_en(gateconfig_en & (numinputs >= 4)),
         .is_border(is_border[7]),
         .is_quad(),
         .btn_pressed(menubtn_pressed[7]));

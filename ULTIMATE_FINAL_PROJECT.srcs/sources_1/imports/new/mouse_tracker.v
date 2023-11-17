@@ -92,7 +92,7 @@ module mouse_tracker(
         init_currstate <= mouse_rst && (init_currstate == INIT_DONE) ? SET_X : init_nextstate;
         case (init_currstate)
             SET_X: begin
-                value <= 0;
+                value <= 96;
                 mouse_setsignals <= 4'b0001;
                 init_nextstate <= SET_Y;
             end

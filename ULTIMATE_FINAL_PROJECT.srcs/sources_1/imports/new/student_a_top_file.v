@@ -23,6 +23,8 @@
 module student_a_top_file(
     input CLOCK,
     input btnU,
+    input btnL,
+    input btnR,
     input [12:0] menu_pixelindex,
     input [12:0] canvas_pixelindex,
     output reg [15:0] menu_rgbdata,
@@ -32,44 +34,36 @@ module student_a_top_file(
     output [3:0] output_gate, 
     input [1:0] circuit_loaded,
 
-    output [15:0]gate_inputs_10_loaded, 
-    output [15:0]gate_inputs_11_loaded,
-    output [15:0]gate_inputs_12_loaded,
-    output [15:0]gate_inputs_13_loaded,
+    output [15:0] gate_inputs_10_loaded, 
+    output [15:0] gate_inputs_11_loaded,
+    output [15:0] gate_inputs_12_loaded,
+    output [15:0] gate_inputs_13_loaded,
 
-    output [15:0]gate_inputs_20_loaded,
-    output [15:0]gate_inputs_21_loaded,
-    output [15:0]gate_inputs_22_loaded,
-    output [15:0]gate_inputs_23_loaded,
+    output [15:0] gate_inputs_20_loaded,
+    output [15:0] gate_inputs_21_loaded,
+    output [15:0] gate_inputs_22_loaded,
+    output [15:0] gate_inputs_23_loaded,
 
-    output [15:0]gate_inputs_30_loaded,
-    output [15:0]gate_inputs_31_loaded,
-    output [15:0]gate_inputs_32_loaded,
-    output [15:0]gate_inputs_33_loaded,
+    output [15:0] gate_inputs_30_loaded,
+    output [15:0] gate_inputs_31_loaded,
+    output [15:0] gate_inputs_32_loaded,
+    output [15:0] gate_inputs_33_loaded,
 
-    output [4:0]gate_type_10_loaded,
-    output [4:0]gate_type_11_loaded,
-    output [4:0]gate_type_12_loaded,
-    output [4:0]gate_type_13_loaded,
+    output [4:0] gate_type_10_loaded,
+    output [4:0] gate_type_11_loaded,
+    output [4:0] gate_type_12_loaded,
+    output [4:0] gate_type_13_loaded,
 
-    output [4:0]gate_type_20_loaded,
-    output [4:0]gate_type_21_loaded,
-    output [4:0]gate_type_22_loaded,
-    output [4:0]gate_type_23_loaded,
+    output [4:0] gate_type_20_loaded,
+    output [4:0] gate_type_21_loaded,
+    output [4:0] gate_type_22_loaded,
+    output [4:0] gate_type_23_loaded,
 
-    output [4:0]gate_type_30_loaded,
-    output [4:0]gate_type_31_loaded,
-    output [4:0]gate_type_32_loaded,
-    output [4:0]gate_type_33_loaded
-    );
-    
-    /*6.25 MHz clock for OLED displays*/
-    wire clk_6p25MHz; 
-    improved_clock #(
-        .MAX_COUNT(7)
-        ) prescaler_6p25MHz (
-        .CLOCK(CLOCK),
-        .IMPROVED_CLOCK(clk_6p25MHz));
+    output [4:0] gate_type_30_loaded,
+    output [4:0] gate_type_31_loaded,
+    output [4:0] gate_type_32_loaded,
+    output [4:0] gate_type_33_loaded
+    );   
 
     /*Translating menu_pixelindex into x and y coordinates*/
     wire [7:0] inverted_menu_xcoord;
@@ -127,11 +121,13 @@ module student_a_top_file(
     wire [16:0] is_border;
     wire [16:0] menubtn_pressed;
     wire [11:0] canvasbtn_pressed;
+    wire [2:0] numinputs;
     displaybutton_control(
         .CLOCK(CLOCK),
         .oled_id(oled_id),
         .gateconfig_en(gateconfig_en),
         .canvasgrid_en(1),
+        .numinputs(numinputs),
         .menu_xcoord(menu_xcoord),
         .menu_ycoord(menu_ycoord),
         .canvas_xcoord(canvas_xcoord),
@@ -146,10 +142,31 @@ module student_a_top_file(
         .menubtn_pressed(menubtn_pressed),
         .canvasbtn_pressed(canvasbtn_pressed));
     
+    wire btnL_ready;
+    wire btnR_ready;
+
+    button_debounce #(
+        .MAX_DEBOUNCE_COUNT(2999_9999)
+    ) btnL_debouncer (
+        .btn(btnL),
+        .clk(CLOCK),
+        .btn_ready(btnL_ready)
+    );
+
+    button_debounce #(
+        .MAX_DEBOUNCE_COUNT(2999_9999)
+    ) btnR_debouncer (
+        .btn(btnR),
+        .clk(CLOCK),
+        .btn_ready(btnR_ready)
+    );
+
     /*Enabling/disabling gateconfig_en based on user input*/
     always @(posedge CLOCK) begin
         if (|canvasbtn_pressed) gateconfig_en <= 1;
         if (mouse_middlepressed) gateconfig_en <= 0;
+        if (btnL && btnL_ready && (circuit_loaded != 0)) gateconfig_en <= 0;
+        if (btnR && btnR_ready && (circuit_loaded != 3)) gateconfig_en <= 0;
     end
     
     wire numinputs_is_zero;
@@ -161,6 +178,7 @@ module student_a_top_file(
     wire [4:0] stageinput_is_one;
     wire [4:0] stageinput_is_two;
     wire [4:0] stageinput_is_three;
+    wire [4:0] gateinput_is_zero;
     wire [4:0] gateinput_is_one;
     wire [4:0] gateinput_is_two;
     wire [4:0] gateinput_is_three;
@@ -168,7 +186,7 @@ module student_a_top_file(
 
     wire loaddata_rdy;
     wire [3:0] selected_gridcell;
-    assign output_gate = selected_gridcell;
+    assign output_gate = selected_gridcell + (1 << 2);
 
     wire [4:0] logicgate;
     wire [20:0] selected_gatedata;
@@ -194,10 +212,47 @@ module student_a_top_file(
         .stageinput_is_one(stageinput_is_one),
         .stageinput_is_two(stageinput_is_two),
         .stageinput_is_three(stageinput_is_three),
+        .gateinput_is_zero(gateinput_is_zero),
         .gateinput_is_one(gateinput_is_one),
         .gateinput_is_two(gateinput_is_two),
         .gateinput_is_three(gateinput_is_three),
-        .gateinput_is_four(gateinput_is_four));
+        .gateinput_is_four(gateinput_is_four),
+        .numinputs(numinputs));
+    
+    wire [2:0] name_AND;
+    wire [3:0] name_NAND;
+    wire [1:0] name_OR;
+    wire [2:0] name_NOR;
+    wire [2:0] name_XOR;
+    wire [3:0] name_XNOR;
+    wire [2:0] name_NOT;
+
+    wire blinky_AND;
+    wire blinky_NAND;
+    wire blinky_OR;
+    wire blinky_NOR;
+    wire blinky_XOR;
+    wire blinky_XNOR;
+    wire blinky_NOT;
+    gatename_display(
+        .CLOCK(CLOCK),
+        .logicgate(logicgate),
+        .menu_xcoord(menu_xcoord),
+        .menu_ycoord(menu_ycoord),
+        .blinky_AND(blinky_AND),
+        .blinky_NAND(blinky_NAND),
+        .blinky_OR(blinky_OR),
+        .blinky_NOR(blinky_NOR),
+        .blinky_XOR(blinky_XOR),
+        .blinky_XNOR(blinky_XNOR),
+        .blinky_NOT(blinky_NOT),
+        .name_AND(name_AND),
+        .name_NAND(name_NAND),
+        .name_OR(name_OR),
+        .name_NOR(name_NOR),
+        .name_XOR(name_XOR),
+        .name_XNOR(name_XNOR),
+        .name_NOT(name_NOT));
 
     wire is_logicgate;
     wire is_gridline;
@@ -258,10 +313,25 @@ module student_a_top_file(
         else if (|stageinput_is_one & gateconfig_en) menu_rgbdata <= 16'hFFFF;
         else if (|stageinput_is_two & gateconfig_en) menu_rgbdata <= 16'hFFFF;
         else if (|stageinput_is_three & gateconfig_en) menu_rgbdata <= 16'hFFFF;
+        else if (|gateinput_is_zero & gateconfig_en) menu_rgbdata <= 16'hFFFF;
         else if (|gateinput_is_one & gateconfig_en) menu_rgbdata <= 16'hFFFF;
         else if (|gateinput_is_two & gateconfig_en) menu_rgbdata <= 16'hFFFF;
         else if (|gateinput_is_three & gateconfig_en) menu_rgbdata <= 16'hFFFF;
         else if (|gateinput_is_four & gateconfig_en) menu_rgbdata <= 16'hFFFF;
+        else if (|name_AND & gateconfig_en & blinky_AND) menu_rgbdata <= 16'hFFFF;
+        else if (|name_NAND & gateconfig_en & blinky_NAND) menu_rgbdata <= 16'hFFFF;
+        else if (|name_OR & gateconfig_en & blinky_OR) menu_rgbdata <= 16'hFFFF; 
+        else if (|name_NOR & gateconfig_en & blinky_NOR) menu_rgbdata <= 16'hFFFF;
+        else if (|name_XOR & gateconfig_en & blinky_XOR) menu_rgbdata <= 16'hFFFF;
+        else if (|name_XNOR & gateconfig_en & blinky_XNOR) menu_rgbdata <= 16'hFFFF;
+        else if (|name_NOT & gateconfig_en & blinky_NOT) menu_rgbdata <= 16'hFFFF;
+        else if (|name_AND & gateconfig_en & ~blinky_AND) menu_rgbdata <= 16'h07FF;
+        else if (|name_NAND & gateconfig_en & ~blinky_NAND) menu_rgbdata <= 16'h07FF;
+        else if (|name_OR & gateconfig_en & ~blinky_OR) menu_rgbdata <= 16'h07FF; 
+        else if (|name_NOR & gateconfig_en & ~blinky_NOR) menu_rgbdata <= 16'h07FF;
+        else if (|name_XOR & gateconfig_en & ~blinky_XOR) menu_rgbdata <= 16'h07FF;
+        else if (|name_XNOR & gateconfig_en & ~blinky_XNOR) menu_rgbdata <= 16'h07FF;
+        else if (|name_NOT & gateconfig_en & ~blinky_NOT) menu_rgbdata <= 16'h07FF;
         else menu_rgbdata <= 16'h0000;
         /*Canvas display control*/
         if (is_cursor && (oled_id == 1)) canvas_rgbdata <= 16'h07E4;

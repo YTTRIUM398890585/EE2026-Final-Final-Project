@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -30,8 +31,8 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files c:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.ip_user_files/mem_init_files/initial_circuit_personal.coe
-add_files c:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.ip_user_files/mem_init_files/logicgate_rom_personal.coe
+add_files C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.ip_user_files/mem_init_files/initial_circuit_personal.coe
+add_files C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.ip_user_files/mem_init_files/logicgate_rom_personal.coe
 read_verilog -library xil_defaultlib {
   C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/Blinkingdisplay.v
   C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/K-map.v
@@ -53,6 +54,13 @@ read_verilog -library xil_defaultlib {
   C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/draw_four.v
   C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/draw_gates.v
   C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/draw_in_wire.v
+  C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/draw_letterA.v
+  C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/draw_letterD.v
+  C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/draw_letterN.v
+  C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/draw_letterO.v
+  C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/draw_letterR.v
+  C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/draw_letterT.v
+  C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/draw_letterX.v
   C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/draw_one.v
   C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/draw_quad.v
   C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/draw_squarecursor.v
@@ -65,6 +73,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/gate_screen.v
   C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/gateconfig_menu.v
   C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/gatedisplay_control.v
+  C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/gatename_display.v
   C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/improved_clock.v
   C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/invert_xy.v
   C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/is_a.v
@@ -104,10 +113,10 @@ read_vhdl -library xil_defaultlib {
   C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/Mouse_Control.vhd
   C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/imports/new/Ps2Interface.vhd
 }
-read_ip -quiet c:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/ip/logicgate_rom/logicgate_rom.xci
+read_ip -quiet C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/ip/logicgate_rom/logicgate_rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/ip/logicgate_rom/logicgate_rom_ooc.xdc]
 
-read_ip -quiet c:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/ip/canvasgrid_ram/canvasgrid_ram.xci
+read_ip -quiet C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/ip/canvasgrid_ram/canvasgrid_ram.xci
 set_property used_in_implementation false [get_files -all c:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/ip/canvasgrid_ram/canvasgrid_ram_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

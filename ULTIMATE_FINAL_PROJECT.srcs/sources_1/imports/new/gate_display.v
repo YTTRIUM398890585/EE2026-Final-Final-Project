@@ -28,6 +28,7 @@ module gate_display #(
     input [1:0] gate_state,
     input [7:0] oleddisplay_xcoord,
     input [6:0] oleddisplay_ycoord,
+    output show_zero,
     output show_one,
     output show_two,
     output show_three,
@@ -42,6 +43,17 @@ module gate_display #(
             2'b11: isnum_en <= 4'b1000;
         endcase
     end
+
+    wire is_zero;
+    draw_zero #(
+        .ORIGIN_X(ORIGIN_X),
+        .ORIGIN_Y(ORIGIN_Y)
+    )(
+        .oleddisplay_xcoord(oleddisplay_xcoord),
+        .oleddisplay_ycoord(oleddisplay_ycoord),
+        .is_zero(is_zero));
+    assign show_zero = is_zero & isnum_en[0]; 
+
     wire is_one;
     draw_one # (
         .ORIGIN_X(ORIGIN_X),
@@ -50,7 +62,7 @@ module gate_display #(
         .oleddisplay_xcoord(oleddisplay_xcoord),
         .oleddisplay_ycoord(oleddisplay_ycoord),
         .is_one(is_one));
-    assign show_one = is_one & isnum_en[0];
+    assign show_one = is_one & isnum_en[1];
     
     wire is_two;
     draw_two # (
@@ -60,7 +72,7 @@ module gate_display #(
         .oleddisplay_xcoord(oleddisplay_xcoord),
         .oleddisplay_ycoord(oleddisplay_ycoord),
         .is_two(is_two));
-    assign show_two = is_two & isnum_en[1];
+    assign show_two = is_two & isnum_en[2];
     
     wire is_three;
     draw_three # (
@@ -70,7 +82,7 @@ module gate_display #(
         .oleddisplay_xcoord(oleddisplay_xcoord),
         .oleddisplay_ycoord(oleddisplay_ycoord),
         .is_three(is_three));
-    assign show_three = is_three & isnum_en[2];
+    assign show_three = is_three & isnum_en[3];
     
     wire is_four;
     draw_four # (
@@ -80,5 +92,5 @@ module gate_display #(
         .oleddisplay_xcoord(oleddisplay_xcoord),
         .oleddisplay_ycoord(oleddisplay_ycoord),
         .is_four(is_four));
-    assign show_four = is_four & isnum_en[3];
+    assign show_four = is_four & 0;
 endmodule

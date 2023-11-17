@@ -31,5 +31,5 @@ module draw_three #(
     assign is_three = (oleddisplay_xcoord == ORIGIN_X) && ((oleddisplay_ycoord == ORIGIN_Y) || (oleddisplay_ycoord == ORIGIN_Y + 2) || (oleddisplay_ycoord == ORIGIN_Y + 4))
     || (oleddisplay_xcoord == ORIGIN_X + 1) && ((oleddisplay_ycoord == ORIGIN_Y) || (oleddisplay_ycoord == ORIGIN_Y + 2) || (oleddisplay_ycoord == ORIGIN_Y + 4))
     || (oleddisplay_xcoord == ORIGIN_X + 2) && ((oleddisplay_ycoord == ORIGIN_Y) || (oleddisplay_ycoord == ORIGIN_Y + 2) || (oleddisplay_ycoord == ORIGIN_Y + 4))
-    || (oleddisplay_xcoord == ORIGIN_X + 3) && (oleddisplay_ycoord >= ORIGIN_Y + 1) && (oleddisplay_ycoord <= ORIGIN_Y + 2) ? 1 : 0;
+    || (oleddisplay_xcoord == ORIGIN_X + 3) && (oleddisplay_ycoord >= ORIGIN_Y + 1) && (oleddisplay_ycoord <= ORIGIN_Y + 3) ? 1 : 0;
 endmodule

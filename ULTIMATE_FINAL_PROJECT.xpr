@@ -239,6 +239,69 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/draw_letterA.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterA.v"/>
+          <Attr Name="ImportTime" Val="1699955370"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/draw_letterD.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterD.v"/>
+          <Attr Name="ImportTime" Val="1699736053"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/draw_letterN.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterN.v"/>
+          <Attr Name="ImportTime" Val="1699736060"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/draw_letterO.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterO.v"/>
+          <Attr Name="ImportTime" Val="1699736068"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/draw_letterR.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterR.v"/>
+          <Attr Name="ImportTime" Val="1699736073"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/draw_letterT.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterT.v"/>
+          <Attr Name="ImportTime" Val="1699736078"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/draw_letterX.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterX.v"/>
+          <Attr Name="ImportTime" Val="1699736084"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/new/draw_one.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_one.v"/>
@@ -342,6 +405,15 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/gatedisplay_control.v"/>
           <Attr Name="ImportTime" Val="1699860368"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/gatename_display.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/gatename_display.v"/>
+          <Attr Name="ImportTime" Val="1699956223"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -699,86 +771,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/draw_letterA.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterA.v"/>
-          <Attr Name="ImportTime" Val="1699955370"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/draw_letterD.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterD.v"/>
-          <Attr Name="ImportTime" Val="1699736053"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/draw_letterN.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterN.v"/>
-          <Attr Name="ImportTime" Val="1699736060"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/draw_letterO.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterO.v"/>
-          <Attr Name="ImportTime" Val="1699736068"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/draw_letterR.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterR.v"/>
-          <Attr Name="ImportTime" Val="1699736073"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/draw_letterT.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterT.v"/>
-          <Attr Name="ImportTime" Val="1699736078"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/draw_letterX.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/draw_letterX.v"/>
-          <Attr Name="ImportTime" Val="1699736084"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/gatename_display.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../EE2026-Final-Project/EE2026_Final_Project.srcs/sources_1/new/gatename_display.v"/>
-          <Attr Name="ImportTime" Val="1699956223"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/new/sighold_debounce.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -822,6 +814,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="Top_Student"/>
@@ -880,9 +873,7 @@
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -891,9 +882,7 @@
     </Run>
     <Run Id="logicgate_rom_synth_1" Type="Ft3:Synth" SrcSet="logicgate_rom" Part="xc7a35tcpg236-1" ConstrsSet="logicgate_rom" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/logicgate_rom_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -902,9 +891,7 @@
     </Run>
     <Run Id="canvasgrid_ram_synth_1" Type="Ft3:Synth" SrcSet="canvasgrid_ram" Part="xc7a35tcpg236-1" ConstrsSet="canvasgrid_ram" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/canvasgrid_ram_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -913,9 +900,7 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -932,9 +917,7 @@
     </Run>
     <Run Id="logicgate_rom_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="logicgate_rom" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="logicgate_rom_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -950,9 +933,7 @@
     </Run>
     <Run Id="canvasgrid_ram_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="canvasgrid_ram" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="canvasgrid_ram_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

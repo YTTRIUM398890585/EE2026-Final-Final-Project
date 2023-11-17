@@ -34,37 +34,44 @@ module canvas_grid(
     output [20:0] selected_gatedata,
 
     /*Outputs for circuit simulation*/
-    output reg [15:0]gate_inputs_10_loaded, 
-    output reg [15:0]gate_inputs_11_loaded,
-    output reg [15:0]gate_inputs_12_loaded,
-    output reg [15:0]gate_inputs_13_loaded,
+    output reg [15:0] gate_inputs_10_loaded, 
+    output reg [15:0] gate_inputs_11_loaded,
+    output reg [15:0] gate_inputs_12_loaded,
+    output reg [15:0] gate_inputs_13_loaded,
 
-    output reg [15:0]gate_inputs_20_loaded,
-    output reg [15:0]gate_inputs_21_loaded,
-    output reg [15:0]gate_inputs_22_loaded,
-    output reg [15:0]gate_inputs_23_loaded,
+    output reg [15:0] gate_inputs_20_loaded,
+    output reg [15:0] gate_inputs_21_loaded,
+    output reg [15:0] gate_inputs_22_loaded,
+    output reg [15:0] gate_inputs_23_loaded,
 
-    output reg [15:0]gate_inputs_30_loaded,
-    output reg [15:0]gate_inputs_31_loaded,
-    output reg [15:0]gate_inputs_32_loaded,
-    output reg [15:0]gate_inputs_33_loaded,
+    output reg [15:0] gate_inputs_30_loaded,
+    output reg [15:0] gate_inputs_31_loaded,
+    output reg [15:0] gate_inputs_32_loaded,
+    output reg [15:0] gate_inputs_33_loaded,
 
-    output reg [4:0]gate_type_10_loaded,
-    output reg [4:0]gate_type_11_loaded,
-    output reg [4:0]gate_type_12_loaded,
-    output reg [4:0]gate_type_13_loaded,
+    output reg [4:0] gate_type_10_loaded,
+    output reg [4:0] gate_type_11_loaded,
+    output reg [4:0] gate_type_12_loaded,
+    output reg [4:0] gate_type_13_loaded,
 
-    output reg [4:0]gate_type_20_loaded,
-    output reg [4:0]gate_type_21_loaded,
-    output reg [4:0]gate_type_22_loaded,
-    output reg [4:0]gate_type_23_loaded,
+    output reg [4:0] gate_type_20_loaded,
+    output reg [4:0] gate_type_21_loaded,
+    output reg [4:0] gate_type_22_loaded,
+    output reg [4:0] gate_type_23_loaded,
 
-    output reg [4:0]gate_type_30_loaded,
-    output reg [4:0]gate_type_31_loaded,
-    output reg [4:0]gate_type_32_loaded,
-    output reg [4:0]gate_type_33_loaded
+    output reg [4:0] gate_type_30_loaded,
+    output reg [4:0] gate_type_31_loaded,
+    output reg [4:0] gate_type_32_loaded,
+    output reg [4:0] gate_type_33_loaded
     );
 
+    wire clk_10MHz;
+    improved_clock # (
+        .OUTPUT_FREQUENCY(10_000_000)
+    )(
+        .CLOCK(CLOCK),
+        .IMPROVED_CLOCK(clk_10MHz));
+    
     /*Grid dimensions and parameters*/
     // GRIDCELL_WIDTH and GRIDCELL_HEIGHT includes the grid line as well
     parameter GRIDCELL_WIDTH = 32;
@@ -73,7 +80,7 @@ module canvas_grid(
     parameter GRID_ROWS = 4;
     
     /*Translating x and y coordinates to grid index and grid cell index*/         
-    wire [3:0] grid_index;
+    wire [5:0] grid_index;
     wire [8:0] gridcell_index;
     wire is_gridcell;
     
@@ -112,78 +119,105 @@ module canvas_grid(
         endcase
     end
     
-    /*Memory control for canvas grid*/    
+    /*Memory control for canvas grid*/
+    wire [20:0] current_gate;   
+    wire [8:0] gateconfig_addr;
+    assign gateconfig_addr = circuit_selected + selected_gridcell;
+    wire [8:0] renderandsim_addr;
+    assign renderandsim_addr = circuit_selected + grid_index;
     wire [20:0] current_gate;
     canvasgrid_ram (
         /*Read and write when gate configuration is enabled*/
         .clka(CLOCK),
         .wea(gateconfig_en && loaddata_rdy),
-        .addra(circuit_selected + selected_gridcell),
+        .addra(gateconfig_addr),
         .dina(new_gatedata),
         .douta(selected_gatedata),
         /*Read for rendering and circuit simulation*/
         .clkb(CLOCK),
         .web(0),
-        .addrb(circuit_selected + grid_index),
+        .addrb(renderandsim_addr),
         .doutb(current_gate));
     
     // Gate variables for logic gate drawings and circuit simulation
     wire [4:0] gate_type;
     assign gate_type = current_gate[4:0];
-    wire [16:0] gate_inputs;
+    wire [15:0] gate_inputs;
     assign gate_inputs = current_gate[20:5];
     
+    reg [5:0] prev_circuitselected;
+    reg simdata_rdy = 1;
+    reg [1:0] simdata_count;
+    reg [5:0] prev_gridindex;
+    reg simdata_counten;
+
     always @(posedge CLOCK) begin
-     case (grid_index)
-        0: begin
-            gate_inputs_10_loaded <= gate_inputs;
-            gate_type_10_loaded <= gate_type;
+        if ((prev_gridindex != grid_index) | (prev_circuitselected != circuit_selected)) begin
+            simdata_rdy <= 0;
+            simdata_count <= 0;
+            simdata_counten <= 1;
+            prev_gridindex <= grid_index;
+            prev_circuitselected <= circuit_selected;
+        end else begin
+            simdata_rdy <= (simdata_count == 2) ? 1 : simdata_rdy;
+            simdata_count <= (simdata_count < 2) && simdata_counten ? simdata_count + 1 : 0; 
+            simdata_counten <= (simdata_count == 2) ? 0 : simdata_counten;
         end
-        1: begin
-            gate_inputs_11_loaded <= gate_inputs;
-            gate_type_11_loaded <= gate_type;
+    end
+
+    always @(posedge clk_10MHz) begin
+        if (simdata_rdy) begin
+             case (grid_index)
+                0: begin
+                    gate_inputs_10_loaded <= gate_inputs;
+                    gate_type_10_loaded <= gate_type;
+                end
+                1: begin
+                    gate_inputs_11_loaded <= gate_inputs;
+                    gate_type_11_loaded <= gate_type;
+                end
+                2: begin
+                    gate_inputs_12_loaded <= gate_inputs;
+                    gate_type_12_loaded <= gate_type;
+                end
+                3: begin
+                    gate_inputs_13_loaded <= gate_inputs;
+                    gate_type_13_loaded <= gate_type;
+                end
+                4: begin
+                    gate_inputs_20_loaded <= gate_inputs;
+                    gate_type_20_loaded <= gate_type;
+                end
+                5: begin
+                    gate_inputs_21_loaded <= gate_inputs;
+                    gate_type_21_loaded <= gate_type;
+                end
+                6: begin
+                    gate_inputs_22_loaded <= gate_inputs;
+                    gate_type_22_loaded <= gate_type;
+                end
+                7: begin
+                    gate_inputs_23_loaded <= gate_inputs;
+                    gate_type_23_loaded <= gate_type;
+                end
+                8: begin
+                    gate_inputs_30_loaded <= gate_inputs;
+                    gate_type_30_loaded <= gate_type;
+                end
+                9: begin
+                    gate_inputs_31_loaded <= gate_inputs;
+                    gate_type_31_loaded <= gate_type;
+                end
+                10: begin
+                    gate_inputs_32_loaded <= gate_inputs;
+                    gate_type_32_loaded <= gate_type;
+                end
+                11: begin
+                    gate_inputs_33_loaded <= gate_inputs;
+                    gate_type_33_loaded <= gate_type;
+                end
+            endcase
         end
-        2: begin
-            gate_inputs_12_loaded <= gate_inputs;
-            gate_type_12_loaded <= gate_type;
-        end
-        3: begin
-            gate_inputs_13_loaded <= gate_inputs;
-            gate_type_13_loaded <= gate_type;
-        end
-        4: begin
-            gate_inputs_20_loaded <= gate_inputs;
-            gate_type_20_loaded <= gate_type;
-        end
-        5: begin
-            gate_inputs_21_loaded <= gate_inputs;
-            gate_type_21_loaded <= gate_type;
-        end
-        6: begin
-            gate_inputs_22_loaded <= gate_inputs;
-            gate_type_22_loaded <= gate_type;
-        end
-        7: begin
-            gate_inputs_23_loaded <= gate_inputs;
-            gate_type_23_loaded <= gate_type;
-        end
-        8: begin
-            gate_inputs_30_loaded <= gate_inputs;
-            gate_type_30_loaded <= gate_type;
-        end
-        9: begin
-            gate_inputs_31_loaded <= gate_inputs;
-            gate_type_31_loaded <= gate_type;
-        end
-        10: begin
-            gate_inputs_32_loaded <= gate_inputs;
-            gate_type_32_loaded <= gate_type;
-        end
-        11: begin
-            gate_inputs_33_loaded <= gate_inputs;
-            gate_type_33_loaded <= gate_type;
-        end
-     endcase
     end
     /*Gate type*/
     parameter NOGATE = 0;
@@ -261,7 +295,7 @@ module canvas_grid(
     assign notgate_template = (gatedrawing_code == ALLGATE_DRAWING) || (gatedrawing_code == NOT_DRAWING) 
     || (gatedrawing_code == ANDorNOT_DRAWING) || (gatedrawing_code == BUBBLE_DRAWING) || in1_template;
     
-    always @(posedge CLOCK) begin
+    always @(posedge clk_10MHz) begin
         if (is_gridcell) begin
             is_gridline <= 0;
             case (gate_type)

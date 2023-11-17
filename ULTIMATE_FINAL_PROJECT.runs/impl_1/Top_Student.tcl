@@ -65,6 +65,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
@@ -74,8 +75,8 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   add_files -quiet C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.runs/synth_1/Top_Student.dcp
-  read_ip -quiet c:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/ip/logicgate_rom/logicgate_rom.xci
-  read_ip -quiet c:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/ip/canvasgrid_ram/canvasgrid_ram.xci
+  read_ip -quiet C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/ip/logicgate_rom/logicgate_rom.xci
+  read_ip -quiet C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/sources_1/ip/canvasgrid_ram/canvasgrid_ram.xci
   read_xdc C:/Users/Irwin/University/AY2023-2024/EE2026/xc7a35tcpg236-1_LAB_PROJECTS/ULTIMATE_FINAL_PROJECT/ULTIMATE_FINAL_PROJECT.srcs/constrs_1/imports/new/constraint.xdc
   link_design -top Top_Student -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb

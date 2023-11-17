@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Tue Nov 14 22:48:10 2023
+| Date             : Fri Nov 17 13:45:03 2023
 | Host             : Irwin running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.112        |
+| Total On-Chip Power (W)  | 0.106        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.040        |
+| Dynamic (W)              | 0.034        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.4         |
-| Junction Temperature (C) | 25.6         |
+| Max Ambient (C)          | 84.5         |
+| Junction Temperature (C) | 25.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.010 |        3 |       --- |             --- |
-| Slice Logic    |     0.008 |    16275 |       --- |             --- |
-|   LUT as Logic |     0.007 |     9385 |     20800 |           45.12 |
-|   CARRY4       |    <0.001 |     1211 |      8150 |           14.86 |
-|   Register     |    <0.001 |     2794 |     41600 |            6.72 |
+| Clocks         |     0.009 |        3 |       --- |             --- |
+| Slice Logic    |     0.005 |    16645 |       --- |             --- |
+|   LUT as Logic |     0.004 |     9522 |     20800 |           45.78 |
+|   CARRY4       |    <0.001 |     1243 |      8150 |           15.25 |
+|   Register     |    <0.001 |     2946 |     41600 |            7.08 |
 |   F7/F8 Muxes  |    <0.001 |      483 |     32600 |            1.48 |
-|   BUFG         |     0.000 |        8 |        32 |           25.00 |
-|   Others       |     0.000 |      541 |       --- |             --- |
-| Signals        |     0.008 |    10395 |       --- |             --- |
+|   BUFG         |     0.000 |        9 |        32 |           28.13 |
+|   Others       |     0.000 |      549 |       --- |             --- |
+| Signals        |     0.006 |    10755 |       --- |             --- |
 | Block RAM      |     0.006 |      1.5 |        50 |            3.00 |
 | I/O            |     0.008 |       68 |       106 |           64.15 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.112 |          |           |                 |
+| Total          |     0.106 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.041 |       0.031 |      0.010 |
+| Vccint    |       1.000 |     0.035 |       0.025 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -143,7 +143,7 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| Top_Student                                      |     0.040 |
+| Top_Student                                      |     0.034 |
 |   PS2Clk_IOBUF_inst                              |     0.000 |
 |   PS2Data_IOBUF_inst                             |     0.000 |
 |   led_array                                      |    <0.001 |
@@ -289,8 +289,10 @@ Table of Contents
 |         w                                        |     0.000 |
 |           w_h                                    |     0.000 |
 |           w_v                                    |     0.000 |
-|   nolabel_line184                                |     0.019 |
-|     nolabel_line107                              |     0.004 |
+|   nolabel_line184                                |     0.014 |
+|     btnL_debouncer                               |    <0.001 |
+|     btnR_debouncer                               |    <0.001 |
+|     nolabel_line101                              |     0.004 |
 |       nolabel_line124                            |    <0.001 |
 |       nolabel_line135                            |    <0.001 |
 |         nolabel_line56                           |    <0.001 |
@@ -298,7 +300,7 @@ Table of Contents
 |         nolabel_line72                           |    <0.001 |
 |       nolabel_line63                             |     0.003 |
 |         Inst_Ps2Interface                        |    <0.001 |
-|     nolabel_line130                              |    <0.001 |
+|     nolabel_line125                              |    <0.001 |
 |       btn_num_gateinputs                         |    <0.001 |
 |         nolabel_line49                           |    <0.001 |
 |       button_AND                                 |    <0.001 |
@@ -346,40 +348,43 @@ Table of Contents
 |         nolabel_line49                           |    <0.001 |
 |       stageinput_4                               |    <0.001 |
 |         nolabel_line49                           |    <0.001 |
-|     nolabel_line176                              |     0.001 |
-|       nolabel_line304                            |    <0.001 |
-|       nolabel_line317                            |    <0.001 |
+|     nolabel_line194                              |     0.001 |
+|       nolabel_line313                            |    <0.001 |
+|       nolabel_line326                            |    <0.001 |
 |         selected_stage                           |    <0.001 |
 |         stageinput1                              |    <0.001 |
 |         stageinput2                              |    <0.001 |
 |         stageinput3                              |    <0.001 |
 |         stageinput4                              |    <0.001 |
-|       nolabel_line333                            |    <0.001 |
+|       nolabel_line343                            |    <0.001 |
 |         gateinput1                               |    <0.001 |
 |         gateinput2                               |    <0.001 |
 |         gateinput3                               |    <0.001 |
 |         gateinput4                               |    <0.001 |
 |         selected_gate                            |    <0.001 |
-|     nolabel_line204                              |     0.013 |
-|       nolabel_line117                            |     0.005 |
-|         U0                                       |     0.005 |
-|           inst_blk_mem_gen                       |     0.005 |
-|             gnbram.gnativebmg.native_blk_mem_gen |     0.005 |
-|               valid.cstr                         |     0.005 |
-|                 ramloop[0].ram.r                 |     0.005 |
-|                   prim_init.ram                  |     0.005 |
-|       nolabel_line85                             |    <0.001 |
-|       nolabel_line95                             |     0.002 |
+|     nolabel_line237                              |    <0.001 |
+|       prescaler_1Hz                              |    <0.001 |
+|     nolabel_line259                              |     0.007 |
+|       nolabel_line102                            |     0.002 |
 |         U0                                       |     0.002 |
 |           inst_blk_mem_gen                       |     0.002 |
 |             gnbram.gnativebmg.native_blk_mem_gen |     0.002 |
 |               valid.cstr                         |     0.002 |
 |                 ramloop[0].ram.r                 |     0.002 |
 |                   prim_init.ram                  |     0.002 |
-|     nolabel_line85                               |     0.000 |
-|   nolabel_line231                                |     0.005 |
+|       nolabel_line129                            |     0.005 |
+|         U0                                       |     0.005 |
+|           inst_blk_mem_gen                       |     0.005 |
+|             gnbram.gnativebmg.native_blk_mem_gen |     0.005 |
+|               valid.cstr                         |     0.005 |
+|                 ramloop[0].ram.r                 |     0.005 |
+|                   prim_init.ram                  |     0.005 |
+|       nolabel_line71                             |    <0.001 |
+|       nolabel_line92                             |    <0.001 |
+|     nolabel_line79                               |     0.000 |
+|   nolabel_line233                                |     0.004 |
 |     btn_clock_gen                                |    <0.001 |
-|     circuit_analyser                             |     0.001 |
+|     circuit_analyser                             |    <0.001 |
 |       clk10m_gen                                 |    <0.001 |
 |     circuit_loader                               |    <0.001 |
 |       btnL_debouncer                             |    <0.001 |

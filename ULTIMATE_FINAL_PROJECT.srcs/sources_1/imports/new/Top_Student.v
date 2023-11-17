@@ -183,7 +183,9 @@ module Top_Student(
 
     student_a_top_file(
         .CLOCK(clock),
-        .btnU(btnU & mode_enable[CIR_SIM_SCREEN]),          // changed from btnC to btnU
+        .btnU(btnU & mode_enable[CIR_SIM_SCREEN]),
+        .btnL(btnL & mode_enable[CIR_SIM_SCREEN]),
+        .btnR(btnR & mode_enable[CIR_SIM_SCREEN]),    // changed from btnC to btnU
         .menu_pixelindex(pix_pos_ja),  
         .canvas_pixelindex(pix_pos_jb),  
         .menu_rgbdata(oled_data_student_a_ja),
@@ -203,25 +205,25 @@ module Top_Student(
         .gate_inputs_22_loaded(gate_inputs_22_loaded),
         .gate_inputs_23_loaded(gate_inputs_23_loaded),
 
-       .gate_inputs_30_loaded(gate_inputs_30_loaded),
-       .gate_inputs_31_loaded(gate_inputs_31_loaded),
-       .gate_inputs_32_loaded(gate_inputs_32_loaded),
-       .gate_inputs_33_loaded(gate_inputs_33_loaded),
+        .gate_inputs_30_loaded(gate_inputs_30_loaded),
+        .gate_inputs_31_loaded(gate_inputs_31_loaded),
+        .gate_inputs_32_loaded(gate_inputs_32_loaded),
+        .gate_inputs_33_loaded(gate_inputs_33_loaded),
 
-       .gate_type_10_loaded(gate_type_10_loaded),
-       .gate_type_11_loaded(gate_type_11_loaded),
-       .gate_type_12_loaded(gate_type_12_loaded),
-       .gate_type_13_loaded(gate_type_13_loaded),
+        .gate_type_10_loaded(gate_type_10_loaded),
+        .gate_type_11_loaded(gate_type_11_loaded),
+        .gate_type_12_loaded(gate_type_12_loaded),
+        .gate_type_13_loaded(gate_type_13_loaded),
 
-       .gate_type_20_loaded(gate_type_20_loaded),
-       .gate_type_21_loaded(gate_type_21_loaded),
-       .gate_type_22_loaded(gate_type_22_loaded),
-       .gate_type_23_loaded(gate_type_23_loaded),
+        .gate_type_20_loaded(gate_type_20_loaded),
+        .gate_type_21_loaded(gate_type_21_loaded),
+        .gate_type_22_loaded(gate_type_22_loaded),
+        .gate_type_23_loaded(gate_type_23_loaded),
 
-       .gate_type_30_loaded(gate_type_30_loaded),
-       .gate_type_31_loaded(gate_type_31_loaded),
-       .gate_type_32_loaded(gate_type_32_loaded),
-       .gate_type_33_loaded(gate_type_33_loaded)
+        .gate_type_30_loaded(gate_type_30_loaded),
+        .gate_type_31_loaded(gate_type_31_loaded),
+        .gate_type_32_loaded(gate_type_32_loaded),
+        .gate_type_33_loaded(gate_type_33_loaded)
     );
 
     wire [15:0]oled_data_student_d;
